@@ -38,7 +38,7 @@ class EmployeeController {
         );
     }
 
-    @PostMapping("employees")
+    @PostMapping("/employees")
     ResponseEntity<?> newEmployee(@RequestBody Employee newEmployee) {
         EntityModel<Employee> entityModel = assembler.toModel(repository.save(newEmployee));
 
